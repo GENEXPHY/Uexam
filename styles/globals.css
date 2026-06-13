@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-primary text-white font-sans;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-dark;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent;
+}
+
+.btn-primary {
+  @apply btn bg-accent text-white hover:bg-accent-dark;
+}
+
+.btn-secondary {
+  @apply btn bg-secondary text-white hover:bg-secondary/80;
+}
+
+.btn-danger {
+  @apply btn bg-danger text-white hover:bg-danger/80;
+}
+
+.btn-success {
+  @apply btn bg-success text-white hover:bg-success/80;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-4 py-2 rounded-lg bg-secondary text-white border border-secondary focus:border-accent focus:outline-none transition-all duration-200;
+}
+
+.input::placeholder {
+  @apply text-gray-400;
+}
+
+/* Card styles */
+.card {
+  @apply bg-secondary rounded-lg p-6 shadow-lg;
+}
+
+.card-hover {
+  @apply card hover:bg-secondary/80 hover:shadow-xl transition-all duration-200 cursor-pointer;
+}
